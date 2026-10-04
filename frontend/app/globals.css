@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 222 26% 9%;
+  --foreground: 210 28% 96%;
+  --card: 222 22% 13%;
+  --card-foreground: 221 45% 96%;
+  --border: 218 18% 24%;
+  --muted: 220 18% 18%;
+  --muted-foreground: 216 12% 70%;
+  --primary: 173 70% 42%;
+  --primary-foreground: 0 0% 100%;
+}
+
+.light {
+  --background: 210 24% 97%;
+  --foreground: 218 28% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 218 28% 12%;
+  --border: 216 18% 84%;
+  --muted: 210 22% 92%;
+  --muted-foreground: 222 14% 42%;
+  --primary: 173 70% 34%;
+  --primary-foreground: 0 0% 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.glass {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+.code-grid {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.markdown-pane pre {
+  overflow: auto;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  padding: 1rem;
+}
+
+.editor-scroll {
+  scrollbar-color: hsl(var(--muted-foreground) / 0.45) transparent;
+}
